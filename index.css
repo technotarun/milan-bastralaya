@@ -449,17 +449,7 @@ footer { background: var(--primary-color); color: var(--white); padding: 50px 0 
     .nav-links.active { right: 0; }
     .menu-toggle { display: flex; }
     .search-container {
-        background: transparent;
-        border: none;
-        padding: 0;
-        width: auto;
-    }
-    #searchInput {
         display: none;
-    }
-    .search-container i {
-        font-size: 1.3rem;
-        color: var(--text-color);
     }
     .btn-login {
         padding: 6px 12px;
@@ -478,7 +468,7 @@ footer { background: var(--primary-color); color: var(--white); padding: 50px 0 
 }
 
 @media (max-width: 480px) {
-    .logo { font-size: 1rem; }
+    .logo { font-size: 1.4rem; }
     .hero-content h1 { font-size: 1.8rem; }
     .hero-content p { font-size: 1rem; }
     .btn { padding: 10px 20px; font-size: 0.9rem; }
