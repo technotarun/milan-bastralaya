@@ -58,7 +58,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // 4. Mock Google Login
+    // 4. Hamburger Menu Toggle for Mobile
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+    }
+
+    // Close mobile menu when a nav link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        });
+    });
+
+    // 5. Mock Google Login
     const loginBtn = document.getElementById('loginBtn');
     loginBtn.addEventListener('click', () => {
         alert("Redirecting to Google Login...");

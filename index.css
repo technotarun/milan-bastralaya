@@ -189,6 +189,18 @@ img { max-width: 100%; display: block; }
 .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
 .bar { width: 25px; height: 3px; background-color: var(--primary-color); transition: var(--transition); }
 
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-7px, -7px);
+}
+
 /* --- Hero Section --- */
 .hero {
     height: 100vh;
@@ -427,9 +439,22 @@ footer { background: var(--primary-color); color: var(--white); padding: 50px 0 
         align-items: center;
         justify-content: center;
         transition: 0.4s ease-in-out;
+        gap: 30px;
     }
     .nav-links.active { right: 0; }
     .menu-toggle { display: flex; }
+    .search-container { display: none; }
+    .btn-login { display: none; }
     .hero-content h1 { font-size: 2.5rem; }
     .about-container { flex-direction: column; }
+    .nav-icons {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo { font-size: 1.4rem; }
+    .hero-content h1 { font-size: 1.8rem; }
+    .hero-content p { font-size: 1rem; }
+    .btn { padding: 10px 20px; font-size: 0.9rem; }
 }
