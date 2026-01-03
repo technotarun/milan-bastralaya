@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milan Bastralaya | Fashion for Everyone</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+    <div class="container nav-container">
+        <div class="logo">Milan<span>&nbsp;Bastralaya</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search fashion...">
+                <i class="fas fa-search" id="searchBtn"></i>
+            </div>
+            <div class="cart-icon" id="cartBtn">
+                <i class="fas fa-shopping-bag"></i>
+                <span id="cart-count">0</span>
+            </div>
+            <button class="btn-login" id="loginBtn"><i class="fab fa-google"></i> Login</button>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h3>Your Bag</h3>
+        <i class="fas fa-times" id="closeCart"></i>
+    </div>
+    <div id="cartItems" class="cart-items-list">
+        <p class="empty-msg">Your bag is empty.</p>
+    </div>
+    <div class="cart-footer">
+        <button class="btn-checkout">Checkout</button>
+    </div>
+</div>
+
+    <header id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Define Your Style</h1>
+            <p>Innovative designs, exclusive brands, and delightful prices. Experience the fashion that speaks to you.</p>
+            <a href="#collections" class="btn btn-primary">Shop Collection</a>
+        </div>
+    </header>
+
+    <section class="features section-padding">
+        <div class="container features-grid">
+            <div class="feature-box">
+                <i class="fas fa-gem"></i>
+                <h3>Exclusive Brands</h3>
+                <p>Curated collections from top fashion houses.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-tags"></i>
+                <h3>Delightful Prices</h3>
+                <p>Premium quality at prices you'll love.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>Get your favorite outfits delivered to your doorstep.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="collections" class="products section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trending Collections</h2>
+                <p>Handpicked styles for Men, Women, and Kids</p>
+            </div>
+            
+            <div class="filter-btns">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="women">Women</button>
+                <button class="filter-btn" data-filter="men">Men</button>
+                <button class="filter-btn" data-filter="kids">Kids</button>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card" data-category="women">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Saree Model">
+                        <span class="badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <h4>Elegant Silk Saree</h4>
+                        <p class="category">Ethnic Wear</p>
+                        <div class="price">₹2,499</div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="men">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1542272617-08f08630329e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Men Jeans">
+                    </div>
+                    <div class="product-info">
+                        <h4>Classic Denim Jeans</h4>
+                        <p class="category">Casual Wear</p>
+                        <div class="price">₹1,299</div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="kids">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1622290291314-e5100ed48e00?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kids Clothes">
+                    </div>
+                    <div class="product-info">
+                        <h4>Kids Party Frock</h4>
+                        <p class="category">Party Wear</p>
+                        <div class="price">₹899</div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="men">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1593032465175-481ac7f401a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Men Sherwani">
+                    </div>
+                    <div class="product-info">
+                        <h4>Royal Sherwani</h4>
+                        <p class="category">Wedding Collection</p>
+                        <div class="price">₹5,999</div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="women">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1583391733958-e0265af9d9a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Women Kurti">
+                        <span class="badge">Sale</span>
+                    </div>
+                    <div class="product-info">
+                        <h4>Designer Kurti Set</h4>
+                        <p class="category">Casual Wear</p>
+                        <div class="price">₹1,150</div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="kids">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1519238263496-414d19b3293e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Boy Tshirt">
+                    </div>
+                    <div class="product-info">
+                        <h4>Cool Summer Tee</h4>
+                        <p class="category">Sportswear</p>
+                        <div class="price">₹499</div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about section-padding">
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Shop Interior">
+            </div>
+            <div class="about-text">
+                <h2>About Milan Bastralaya</h2>
+                <p>Innovative designs, exclusive brands and delightful prices! Fall in love with fashion that truly defines your style, only at MilanBastralaya.</p>
+                <p>We pride ourselves on offering a wide variety of categories including casualwear, ethnicwear, formalwear, partywear, and sportswear. Whether you are shopping for Men, Women, or Kids, we have something special for everyone.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>1000+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Brands</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Visit Us</h2>
+                <p>We'd love to see you in person</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+					<div class="info-item">
+						<i class="fas fa-phone-alt"></i>
+						<div>
+							<h4>Call Us</h4>
+							<p>+91 94348 28496</p>
+						</div>
+					</div>
+					<a href="https://wa.me/919434828496" target="_blank" class="info-item whatsapp-link">
+						<i class="fab fa-whatsapp"></i>
+						<div>
+							<h4>WhatsApp</h4>
+							<p>Chat with us directly</p>
+						</div>
+					</a>
+					<div class="info-item">
+						<i class="fas fa-envelope"></i>
+						<div>
+							<h4>Email</h4>
+							<p>milanbastralaya@gmail.com</p>
+						</div>
+					</div>
+				</div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.246835063462!2d88.7850!3d22.9400!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDU2JzI0LjAiTiA4OMKwNDcnMDYuMCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <h2>Milan<span>Bastralaya</span></h2>
+                <p>Your one-stop destination for family fashion.</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Milan Bastralaya. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
