@@ -186,11 +186,15 @@ img { max-width: 100%; display: block; }
     justify-content: center;
 }
 
-.menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-.bar { width: 25px; height: 3px; background-color: var(--primary-color); transition: var(--transition); }
+.menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; justify-content: center; width: 25px; height: 25px; position: relative; }
+.bar { width: 25px; height: 3px; background-color: var(--primary-color); transition: var(--transition); position: absolute; }
+.bar:nth-child(1) { top: 5px; }
+.bar:nth-child(2) { top: 11px; }
+.bar:nth-child(3) { top: 17px; }
 
 .menu-toggle.active .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-8px, 8px);
+    top: 11px;
+    transform: rotate(45deg);
 }
 
 .menu-toggle.active .bar:nth-child(2) {
@@ -198,7 +202,8 @@ img { max-width: 100%; display: block; }
 }
 
 .menu-toggle.active .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-7px, -7px);
+    top: 11px;
+    transform: rotate(-45deg);
 }
 
 /* --- Hero Section --- */
@@ -443,12 +448,32 @@ footer { background: var(--primary-color); color: var(--white); padding: 50px 0 
     }
     .nav-links.active { right: 0; }
     .menu-toggle { display: flex; }
-    .search-container { display: none; }
-    .btn-login { display: none; }
+    .search-container {
+        background: transparent;
+        border: none;
+        padding: 0;
+        width: auto;
+    }
+    #searchInput {
+        display: none;
+    }
+    .search-container i {
+        font-size: 1.3rem;
+        color: var(--text-color);
+    }
+    .btn-login {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+        gap: 6px;
+    }
+    .btn-login i {
+        display: none;
+    }
     .hero-content h1 { font-size: 2.5rem; }
     .about-container { flex-direction: column; }
     .nav-icons {
-        gap: 15px;
+        gap: 12px;
+        font-size: 1rem;
     }
 }
 
@@ -457,4 +482,8 @@ footer { background: var(--primary-color); color: var(--white); padding: 50px 0 
     .hero-content h1 { font-size: 1.8rem; }
     .hero-content p { font-size: 1rem; }
     .btn { padding: 10px 20px; font-size: 0.9rem; }
+    .btn-login {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+    }
 }
